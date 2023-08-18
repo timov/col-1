@@ -57,7 +57,7 @@ export const guardChecker = async (
 
   let guardsToCheck: { label: string; guards: GuardSet }[] = candyGuard.groups;
   guardsToCheck.push({ label: "default", guards: candyGuard.guards });
-
+  console.log(candyGuard.groups);
   //no wallet connected. return dummies
   const dummyPublicKey = publicKey("11111111111111111111111111111111");
   if (
