@@ -51,6 +51,7 @@ const useCandyMachine = (umi: Umi, candyMachineId: string, checkEligibility: boo
         let candyMachine;
         try {
           candyMachine = await fetchCandyMachine(umi, publicKey(candyMachineId));
+          console.log(candyMachine);
         } catch (e) {
           console.error(e);
           toast({
