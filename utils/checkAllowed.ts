@@ -60,6 +60,7 @@ export const guardChecker = async (
   console.log(candyGuard.groups);
   //no wallet connected. return dummies
   const dummyPublicKey = publicKey("11111111111111111111111111111111");
+  console.log(candyMachine);
   if (
     umi.identity.publicKey === dummyPublicKey ||
     candyMachine.itemsLoaded - Number(candyMachine.itemsRedeemed) === 0
