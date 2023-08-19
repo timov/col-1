@@ -1,8 +1,8 @@
 // Purpose: Contains texts that will be used in the UI when rendering the buttons
 // label has to be the exact same as in your candy machine config
 export const mintText = [
-  { label: "OG", mintText: "Only selected OG members can mint", buttonLabel: "Mint now!", header: "OGs Mint" },
-  { label: "WL", mintText: "Only selected WL members can mint", buttonLabel: "Mint now!", header: "WLs Mint" },
+  { label: "OGs", mintText: "Only selected OG members can mint", buttonLabel: "Mint now!", header: "OGs Mint" },
+  { label: "WLs", mintText: "Only selected WL members can mint", buttonLabel: "Mint now!", header: "WLs Mint" },
   { label: "Public", mintText: "Everyone can mint!", buttonLabel: "Mint now!", header: "Public Mint" }
 ];
 
