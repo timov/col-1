@@ -1,6 +1,6 @@
 :root {
   --max-width: 1100px;
-  --border-radius: 12px;
+  --border-radius: 1rem;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -71,5 +71,5 @@ button.wallet-adapter-button-trigger {
 }
 
 button.wallet-adapter-button-trigger:hover {
-  background-color: rgb(var(--hover-background-rgb)) !important;
+  background-color: rgb(#b45be1) !important;
 }

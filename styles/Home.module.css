@@ -1,14 +1,17 @@
 .wallet { 
   display: flex;
   padding: 3rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   flex-direction: row-reverse;
 }
 
 .center {
   position: relative;
+  padding-top: 0rem;
   padding: 3rem;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -34,7 +37,7 @@
 
 .form button:hover {
   cursor: pointer;
-  background-color: rgb(var(--darker-accent-rgb));
+  background-color: rgb(#b45be1);
 }
 
 .form button span {

@@ -7,7 +7,7 @@ export const mintText = [
 ];
 
 //header image in the ui. replace with your own
-export const image = "https://bafybeiemxglrqbkggwlrnfbv2gh55jytjuhhbc42z6lcfyd54nr3ntuige.ipfs.nftstorage.link/COL%20(1).gif";
+export const image = "https://gbgql2f7jijaw7jpeukh2k3hhsmzcwgtx47ppjsjvxjy3f4rx3ya.arweave.net/ME0F6L9KEgt9LyUUfStnPJmRWNO_PvemSa3TjZeRvvA?ext=jpg";
 
 //website title
 export const headerText = "Code of Life";

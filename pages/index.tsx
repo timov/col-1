@@ -185,29 +185,19 @@ export default function Home() {
         <style jsx global>
           {`
       body {
-          background: #2d3748; 
+          background-position: center;
+          background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95923662-38e8-44e3-9acc-88a7731db825/dful1eg-36e9a5f3-417a-4d1b-af68-1e172bc1a09c.jpg/v1/fill/w_1920,h_799,q_75,strp/code_of_life_by_aronvisuals_dful1eg-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzk5IiwicGF0aCI6IlwvZlwvOTU5MjM2NjItMzhlOC00NGUzLTlhY2MtODhhNzczMWRiODI1XC9kZnVsMWVnLTM2ZTlhNWYzLTQxN2EtNGQxYi1hZjY4LTFlMTcyYmMxYTA5Yy5qcGciLCJ3aWR0aCI6Ijw9MTkyMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.32YZ2SbPuVLkc_Q9GTgKbklf5u9SrxyivptKtumKbas"); 
        }
    `}
         </style>
-        <Card>
+        <Card backgroundColor={"#1e2423cc"} color={"white"}>
           <CardHeader>
             <Flex minWidth='max-content' alignItems='center' gap='2'>
               <Box>
-                <Heading size='md'>{headerText}</Heading>
+                {/* <Heading size='md'>{headerText}</Heading> */}
               </Box>
-              {loading ? (<></>) : (
-                <Flex justifyContent="flex-end" marginLeft="auto">
-                  <Box background={"teal.100"} borderRadius={"5px"} minWidth={"50px"} minHeight={"50px"} p={2} >
-                    <VStack >
-                      <Text fontSize={"sm"}>Available NFTs:</Text>
-                      <Text fontWeight={"semibold"}>{Number(candyMachine?.data.itemsAvailable) - Number(candyMachine?.itemsRedeemed)}/{Number(candyMachine?.data.itemsAvailable)}</Text>
-                    </VStack>
-                  </Box>
-                </Flex>
-              )}
             </Flex>
           </CardHeader>
-
           <CardBody>
             <Center>
               <Box
@@ -224,6 +214,16 @@ export default function Home() {
               </Box>
             </Center>
             <Divider my="10px" />
+            {/* {loading ? (<></>) : (
+                <Flex justifyContent="center">
+                  <Box background={"teal.100"} borderRadius={"5px"} minWidth={"50px"} minHeight={"50px"} p={2} >
+                    <VStack >
+                      <Text fontSize={"sm"} color={"grey"}>Minted NFTs:</Text>
+                      <Text fontWeight={"semibold"} color={"grey"}>{Number(candyMachine?.itemsRedeemed)}/{Number(candyMachine?.data.itemsAvailable)}</Text>
+                    </VStack>
+                  </Box>
+                </Flex>
+              )} */}
             <Stack divider={<StackDivider />} spacing='8'>
               {loading ? (
                 <div>

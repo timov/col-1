@@ -12,7 +12,7 @@ import { useSolanaTime } from "@/utils/SolanaTimeContext";
 const updateLoadingText = (loadingText: string | undefined, guardList: GuardReturn[], label: string, setGuardList: Dispatch<SetStateAction<GuardReturn[]>>,) => {
     const guardIndex = guardList.findIndex((g) => g.label === label);
     if (guardIndex === -1) {
-        console.error("guard not found");
+        console.error("Guard not found!");
         return;
     }
     const newGuardList = [...guardList];
@@ -37,7 +37,7 @@ const fetchNft = async (umi: Umi, nftAdress: PublicKey, toast: (options: Omit<Us
         console.error(e);
         toast({
             title: 'Nft could not be fetched!',
-            description: "Please check your Wallet instead.",
+            description: "Please check your wallet instead.",
             status: 'error',
             duration: 9000,
             isClosable: true,
@@ -66,14 +66,14 @@ const mintClick = async (
 ) => {
     const guardToUse = chooseGuardToUse(guard, candyGuard);
     if (!guardToUse.guards) {
-        console.error("no guard defined!");
+        console.error("No guard defined!");
         return;
     }
     try {
         //find the guard by guardToUse.label and set minting to true
         const guardIndex = guardList.findIndex((g) => g.label === guardToUse.label);
         if (guardIndex === -1) {
-            console.error("guard not found");
+            console.error("Guard not found!");
             return;
         }
         const newGuardList = [...guardList];
@@ -99,7 +99,7 @@ const mintClick = async (
 
         const groupedTx = await combineTransactions(umi, [routeBuild, tx], toast);
         if (!groupedTx || groupedTx.length === 0) {
-            console.error("no transaction to send");
+            console.error("No transaction to send!");
             return;
         }
 
@@ -137,9 +137,9 @@ const mintClick = async (
         }
         if (!lastSignature) {
             // throw error that no tx was created
-            throw new Error("no tx was created")
+            throw new Error("No tx was created!")
         }
-        updateLoadingText(`finalizing transaction`, guardList, guardToUse.label, setGuardList);
+        updateLoadingText(`Finalizing transaction`, guardList, guardToUse.label, setGuardList);
 
         toast({
             title: 'Mint successful!',
@@ -159,13 +159,13 @@ const mintClick = async (
             await new Promise((resolve) => setTimeout(resolve, 1000));
         }
         if (transaction === null) {
-            throw new Error(`no tx on chain for signature ${lastSignature}`)
+            throw new Error(`No tx on chain for signature ${lastSignature}!`)
         }
 
         const logs: string[] = transaction.meta.logs;
         detectBotTax(logs);
 
-        updateLoadingText("Fetching your NFT", guardList, guardToUse.label, setGuardList);
+        updateLoadingText("Fetching your NFT...", guardList, guardToUse.label, setGuardList);
         const fetchedNft = await fetchNft(umi, nftMint.publicKey, toast);
         if (fetchedNft.digitalAsset && fetchedNft.jsonMetadata) {
             if (mintsCreated === undefined) {
@@ -178,7 +178,7 @@ const mintClick = async (
         }
 
     } catch (e) {
-        console.error(`minting failed because of ${e}`);
+        console.error(`Mint failed because of ${e}.`);
 
         toast({
             title: 'Your mint failed!',
@@ -191,7 +191,7 @@ const mintClick = async (
         //find the guard by guardToUse.label and set minting to true
         const guardIndex = guardList.findIndex((g) => g.label === guardToUse.label);
         if (guardIndex === -1) {
-            console.error("guard not found");
+            console.error("Guard not found!");
             return;
         }
         const newGuardList = [...guardList];
@@ -337,7 +337,6 @@ export function ButtonList({
                     {buttonGuard.mintText}
                 </Text>
                 <Tooltip label={buttonGuard.tooltip} aria-label="Mint button">
-
                     <Button
                         onClick={() =>
                             mintClick(
@@ -356,8 +355,8 @@ export function ButtonList({
                             )
                         }
                         key={buttonGuard.label}
-                        size="sm"
-                        backgroundColor="teal.100"
+                        size="md"
+                        backgroundColor="#1dd79b"
                         isDisabled={!buttonGuard.allowed}
                         isLoading={
                             guardList.find((elem) => elem.label === buttonGuard.label)?.minting
