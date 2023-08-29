@@ -124,9 +124,9 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "Wallet not allowlisted",
+          reason: "Wallet not whitelisted!",
         });
-        console.info(`Guard ${eachGuard.label} wallet not allowlisted!`);
+        console.info(`Guard ${eachGuard.label} wallet not whitelisted!`);
         continue;
       }
     }
@@ -151,7 +151,7 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "Not enough SOL",
+          reason: "Not enough SOL!",
         });
         console.info(
           `Guard ${eachGuard.label}; freezeSolPayment: not enough SOL`
@@ -165,7 +165,7 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "Mint limit of this wallet reached",
+          reason: "Wallet mint limit is reached!",
         });
         console.info(`Guard ${eachGuard.label}; mintLimit reached`);
         continue;
@@ -265,9 +265,9 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "StartDate not reached!",
+          reason: "Start date not reached!",
         });
-        console.info(`${eachGuard.label} StartDate not reached!`);
+        console.info(`${eachGuard.label} Start date not reached!`);
 
         continue;
       }
