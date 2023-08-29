@@ -280,19 +280,6 @@ export const combineTransactions = async (
 ) => {
   const returnArray: TransactionBuilder[] = [];
   let builder = transactionBuilder();
-  let buyBeer = true;
-  if (!process.env.NEXT_PUBLIC_BUYMARKBEER) {
-      buyBeer = false;
-      console.log("The Creator does not want to pay for MarkSackerbergs beer 😒")
-  }
-  if (buyBeer) {
-    builder = builder.prepend(
-      transferSol(umi, {
-        destination: publicKey("BeeryDvghgcKPTUw3N3bdFDFFWhTWdWHnsLuVebgsGSD"),
-        amount: sol(Number(0.005)),
-      })
-    );
-  }
   // combine as many transactions as possible into one
   for (let i = 0; i <= txs.length - 1; i++) {
     const tx = txs[i];
