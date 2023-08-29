@@ -139,7 +139,7 @@ const mintClick = async (
             // throw error that no tx was created
             throw new Error("No tx was created!")
         }
-        updateLoadingText(`Finalizing transaction`, guardList, guardToUse.label, setGuardList);
+        updateLoadingText(`Finalizing`, guardList, guardToUse.label, setGuardList);
 
         toast({
             title: 'Mint successful!',
@@ -165,7 +165,7 @@ const mintClick = async (
         const logs: string[] = transaction.meta.logs;
         detectBotTax(logs);
 
-        updateLoadingText("Fetching your NFT...", guardList, guardToUse.label, setGuardList);
+        updateLoadingText("Fetching NFT", guardList, guardToUse.label, setGuardList);
         const fetchedNft = await fetchNft(umi, nftMint.publicKey, toast);
         if (fetchedNft.digitalAsset && fetchedNft.jsonMetadata) {
             if (mintsCreated === undefined) {

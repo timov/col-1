@@ -64,7 +64,7 @@ export default function Card({ metadata }: { metadata: JsonMetadata }) {
             />
             <Text fontWeight={"semibold"} marginTop={"15px"}>{metadata.name}</Text>
             <Text>{metadata.description}</Text>
-            <Traits metadata={metadata} />
+            {/* <Traits metadata={metadata} /> */}
         </Box>
     );
 }
