@@ -3,9 +3,10 @@
 export const allowLists = new Map<string, Array<string>> ([
     ["VIP",
     [
-      "Dcv1dfEjvYgC2Jj9DkM3eqsdiz29DDsZce25ry88U9C7",
-      "GA52jBEAuEEZTP9J659NV2NdJSYCw9mv5e7emBkYDM76",
-      "AV4kFpGvAPM19VvsiCFJZJFTicgZP97f3TnTeqrFV7Cr",
-      "5k33NGw1JN7JDJQR7TqKvpG3vVMtBs13unjSnz1yV911"
+      "EMwzXaSdbkZAe6g8nBa9Q5USdsewRWLqr76sec8D7kht",
+      "HcLyed4LwURAKtAPcdYzsmoPYeBBBc62L55YFdx6FUQA",
+      "4QCpKz8pxBG4nqFt1t25QcvvxL9dQr2GhNKhP5P3GuvQ",
+      "77GUXCGhQ9hSTRg67tRdxRHMcsGLuUdDzwHKLvhcG6Le",
+      "BkdHTeZX6yTd4PD4bQVQGz1M27R61Ceh1ZJogiNqrkwb"
     ]]
 ]);
