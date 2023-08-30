@@ -187,6 +187,9 @@ export default function Home() {
       body {
           background-position: center;
           background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95923662-38e8-44e3-9acc-88a7731db825/dful1eg-36e9a5f3-417a-4d1b-af68-1e172bc1a09c.jpg/v1/fill/w_1920,h_799,q_75,strp/code_of_life_by_aronvisuals_dful1eg-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzk5IiwicGF0aCI6IlwvZlwvOTU5MjM2NjItMzhlOC00NGUzLTlhY2MtODhhNzczMWRiODI1XC9kZnVsMWVnLTM2ZTlhNWYzLTQxN2EtNGQxYi1hZjY4LTFlMTcyYmMxYTA5Yy5qcGciLCJ3aWR0aCI6Ijw9MTkyMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.32YZ2SbPuVLkc_Q9GTgKbklf5u9SrxyivptKtumKbas"); 
+       },
+       h1.css-gmuwbf {
+        font-size: 2rem;
        }
    `}
         </style>
@@ -246,7 +249,7 @@ export default function Home() {
                   setCheckEligibility={setCheckEligibility}
                 />
               )} */}
-              
+              <h1 className="css-gmuwbf">Minting closed!</h1>
             </Stack>
           </CardBody>
         </Card >
