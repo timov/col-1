@@ -141,14 +141,6 @@ const mintClick = async (
         }
         updateLoadingText(`Finalizing`, guardList, guardToUse.label, setGuardList);
 
-        toast({
-            title: 'Mint successful!',
-            description: `You can find your NFT in your wallet.`,
-            status: 'success',
-            duration: 90000,
-            isClosable: true,
-        })
-
         //loop umi.rpc.getTransaction(lastSignature) until it does not return null. Sleep 1 second between each try.
         let transaction: TransactionWithMeta | null = null;
         for (let i = 0; i < 30; i++) {
@@ -164,6 +156,14 @@ const mintClick = async (
 
         const logs: string[] = transaction.meta.logs;
         detectBotTax(logs);
+
+        toast({
+            title: 'Mint successful!',
+            description: `You can find your NFT in your wallet.`,
+            status: 'success',
+            duration: 90000,
+            isClosable: true,
+        })
 
         updateLoadingText("Fetching NFT", guardList, guardToUse.label, setGuardList);
         const fetchedNft = await fetchNft(umi, nftMint.publicKey, toast);
