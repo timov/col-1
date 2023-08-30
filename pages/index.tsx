@@ -225,7 +225,7 @@ export default function Home() {
                 </Flex>
               )} */}
             <Stack divider={<StackDivider />} spacing='8'>
-              {loading ? (
+              {/* {loading ? (
                 <div>
                   <Skeleton height="30px" my="10px" />
                   <Skeleton height="30px" my="10px" />
@@ -245,7 +245,7 @@ export default function Home() {
                   onOpen={onShowNftOpen}
                   setCheckEligibility={setCheckEligibility}
                 />
-              )}
+              )} */}
             </Stack>
           </CardBody>
         </Card >
