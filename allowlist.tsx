@@ -8,6 +8,7 @@ export const allowLists = new Map<string, Array<string>> ([
       "4QCpKz8pxBG4nqFt1t25QcvvxL9dQr2GhNKhP5P3GuvQ",
       "77GUXCGhQ9hSTRg67tRdxRHMcsGLuUdDzwHKLvhcG6Le",
       "BkdHTeZX6yTd4PD4bQVQGz1M27R61Ceh1ZJogiNqrkwb",
-      "CoL1aKedMaact9dXa6S86iUzhcbGZoBctKZQGxYNsC6q"
+      "CoL1aKedMaact9dXa6S86iUzhcbGZoBctKZQGxYNsC6q",
+      "77GUXCGhQ9hSTRg67tRdxRHMcsGLuUdDzwHKLvhcG6Le"
     ]]
 ]);
